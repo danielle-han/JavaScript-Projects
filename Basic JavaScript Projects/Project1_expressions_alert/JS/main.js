@@ -30,3 +30,8 @@ document.write(pet1, pet2, pet3, pet4, pet5, pet6); //display the variables
 
 //expression:
 var expression = 4 + 5;
+
+//HTML event function
+function onMouseOver() {
+    document.getElementById('event').innerHTML = Date();
+}
