@@ -11,3 +11,11 @@ var sentence = "this is a string"; //assign string to var
 sentence += " that has been concatenated"; //concatenate another string to string assigned to var
 document.getElementById('concatenate').innerHTML = sentence; //display concatenated string in HTML element with id 'concatenate'
 }
+
+//function challenge: 
+function addition(x,y) {
+    return x + y;
+}
+
+var sum = addition(4,6);
+document.write(sum);
