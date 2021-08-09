@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+    <script>
+        //selecting whole document/page when loaded/ready
+        $(document).ready(function(){
+            $('html').append( //select html element and append following content
+                "<body>\
+                    <div id='container'>\
+                    <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            $('#2').css({'color':'red'}); //select element with id 2 (paragraph 2) and give it a font color of red
+            $('#3').click(function(){ //select id 3 (paragraph 3) and when it is clicked, hide heading1
+                $('h1').hide();
+            });
+
+            //Challenge - executing an effect (fadeOut) and and event (click)
+            $('#1').click(function(){ //select id 1 (paragraph 1) when clicked - select id 2 and give effect of fading out.
+                $('#2').fadeOut(1000);
+            });
+        });
+    </script>
+</html>
